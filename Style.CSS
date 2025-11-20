@@ -125,3 +125,74 @@ footer {
         flex-direction: column;
     }
 }
+/* PAGE SOLDE */
+.solde-section {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.solde-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.solde-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.solde-card {
+    background-color: #fff;
+    display: inline-block;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    min-width: 300px;
+}
+
+.solde-card h2 {
+    margin-bottom: 15px;
+    color: #1a3d7c;
+}
+
+.montant {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffcc33; /* touche prestige */
+}
+
+.info {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Bouton */
+#refresh-btn {
+    background-color: #1a3d7c;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#refresh-btn:hover {
+    background-color: #ffcc33;
+    color: #1a3d7c;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a3d7c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
