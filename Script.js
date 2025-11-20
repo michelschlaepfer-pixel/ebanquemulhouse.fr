@@ -75,3 +75,23 @@ window.addEventListener('scroll', revealOnScroll);
 
 // Exécuter une première fois au chargement
 revealOnScroll();
+// FADE-IN AU SCROLL
+const soldeSection = document.querySelector('.solde-section');
+
+function revealSolde() {
+    const triggerBottom = window.innerHeight * 0.85;
+    const sectionTop = soldeSection.getBoundingClientRect().top;
+
+    if(sectionTop < triggerBottom){
+        soldeSection.classList.add('visible');
+    }
+}
+
+window.addEventListener('scroll', revealSolde);
+revealSolde();
+
+// BOUTON ACTUALISER
+const refreshBtn = document.getElementById('refresh-btn');
+refreshBtn.addEventListener('click', () => {
+    alert('Solde actualisé avec succès !');
+});
