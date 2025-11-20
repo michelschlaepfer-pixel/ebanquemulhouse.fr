@@ -36,3 +36,21 @@ accueilButton.addEventListener('mouseenter', () => {
 accueilButton.addEventListener('mouseleave', () => {
     accueilButton.style.transform = 'scale(1)';
 });
+// -----------------------------
+// SLIDER AUTOMATIQUE
+// -----------------------------
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if(i === index) slide.classList.add('active');
+    });
+}
+
+// Changer de slide toutes les 4 secondes
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}, 4000);
