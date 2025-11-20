@@ -195,4 +195,42 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    
+    /* HEADER AVEC LOGO */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 50px; /* taille du logo */
+    width: auto;
+}
+
+/* NAVIGATION RESTE SUR LA DROITE */
+header nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc33;
+}
+
+/* Sticky menu reste compatible */
+header.sticky .header-container {
+    padding: 10px 20px;
+}
 }
